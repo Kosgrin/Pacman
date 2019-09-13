@@ -1,0 +1,28 @@
+﻿<Window x:Class="PacMan.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:PacMan"
+        mc:Ignorable="d"
+        Title="PacMan"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        ResizeMode="NoResize"
+        Background="Black"
+        Width="525"
+        Height="700" >
+    <Canvas Name="GameCanvas">
+        <Button  Canvas.Left="180" Canvas.Top="257" Width="163" Click="Button_Click" Height="48" >
+            <Button.Background>
+                <ImageBrush ImageSource="Images/StartMenu/press-start-pixel-png.png"/>
+            </Button.Background>
+        </Button>
+
+        <Image gif:ImageBehavior.AnimatedSource="Images\StartMenu\pacmanMove.gif" Canvas.Top="336" Width="518" />
+        <Image Height="100" Canvas.Left="89" Canvas.Top="130" Width="347" Source="Images/StartMenu/Logo.png"  />
+        
+    </Canvas>
+</Window>
